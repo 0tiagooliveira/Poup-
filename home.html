@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container-arredondado">
+        <!-- Ícone para editar perfil -->
+        <div class="editar-perfil">
+            <img src="icon/perfil.svg" alt="Editar Perfil">
+        </div>
+
+        <!-- Conteúdo da página -->
+        <div class="conteudo">
+            <!-- Lista de meses -->
+            <div class="lista-meses">
+                <button id="mes-atual" onclick="toggleListaMeses()">Janeiro</button>
+                <div id="dropdown-meses" class="dropdown-conteudo">
+                    <button onclick="selecionarMes('Janeiro')">Janeiro</button>
+                    <button onclick="selecionarMes('Fevereiro')">Fevereiro</button>
+                    <button onclick="selecionarMes('Março')">Março</button>
+                    <button onclick="selecionarMes('Abril')">Abril</button>
+                    <button onclick="selecionarMes('Maio')">Maio</button>
+                    <button onclick="selecionarMes('Junho')">Junho</button>
+                    <button onclick="selecionarMes('Julho')">Julho</button>
+                    <button onclick="selecionarMes('Agosto')">Agosto</button>
+                    <button onclick="selecionarMes('Setembro')">Setembro</button>
+                    <button onclick="selecionarMes('Outubro')">Outubro</button>
+                    <button onclick="selecionarMes('Novembro')">Novembro</button>
+                    <button onclick="selecionarMes('Dezembro')">Dezembro</button>
+                </div>
+            </div>
+
+            <!-- Saldo em contas -->
+            <div class="saldo-contas">
+                <span>Saldo em contas:</span>
+                <span class="valor-saldo">R$ 0,00</span>
+                <button class="toggle-saldo">
+                    <img src="icon/ver.svg" alt="Esconder Saldo">
+                </button>
+            </div>
+
+            <!-- Receitas e Despesas -->
+            <div class="receitas-despesas">
+                <div class="receitas">
+                    <img src="icon/receitas.svg" alt="Receitas">
+                    <span>Receitas:</span>
+                    <span class="valor-receitas">R$ 0,00</span>
+                </div>
+                <div class="despesas">
+                    <img src="icon/despesa.svg" alt="Despesas">
+                    <span>Despesas:</span>
+                    <span class="valor-despesas">R$ 0,00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="titulo-secao">Contas</h2>
+
+    <!-- Seção Contas -->
+    <div class="container-contas">
+
+        <div class="item-conta">
+            <div class="info-conta">
+                <img src="icon/carteira.svg" alt="Carteira">
+                <div>
+                    <span class="titulo-conta">Carteira</span><br>
+                    <span class="saldo-conta">R$ 0,00</span>
+                </div>
+            </div>
+            <button class="adicionar-conta">+</button>
+        </div>
+        <button class="btn-adicionar-conta" onclick="adicionarConta()">Adicionar uma conta</button>
+        <div class="saldo-total">
+            <span>Total R$:</span>
+            <span class="valor-total">0,00</span>
+        </div>
+    </div>
+
+    <!-- Barra de navegação -->
+    <div class="fundo-navbar"></div>
+    <div class="navbar">
+        <a href="#home" class="item-navbar">
+            <img src="icon/home.svg" alt="home">
+            <span>Início</span>
+        </a>
+        <a href="#transacoes" class="item-navbar">
+            <img src="icon/Transações.svg" alt="Transações">
+            <span>Transações</span>
+        </a>
+        <button class="item-navbar adicionar-navbar" onclick="toggleMenu()">
+            <img src="icon/+.svg" alt="Adicionar">
+        </button>
+        <a href="#planejamento" class="item-navbar">
+            <img src="icon/Planejamento.svg" alt="Planejamento">
+            <span>Planejamento</span>
+        </a>
+        <a href="#mais" class="item-navbar">
+            <img src="icon/mais.svg" alt="Mais">
+            <span>Mais</span>
+        </a>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="entrar.js"></script>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="scroll">
+            <div class="background"></div>
+            <div class="btn-voltar-criar-conta">
+                <a href="index.html">
+                    <img src="./icon/flecha-branca.svg" alt="Voltar">
+                    <p>Voltar</p>
+                </a>
+            </div>
+
+            <div class="logo-entrar">
+                <div class="logo">
+                    <img src="./icon/logo-branca.svg" alt="Logo Poup+">
+                </div>
+
+                <div class="entrar">
+                    <div class="h1-entrar">
+                        <h1>Bem Vindo ao Poup+!</h1>
+                    </div>
+                    <div class="formulario">
+                        <!-- Campo E-mail -->
+                        <input type="email" id="email" class="input-email" placeholder="E-mail" required> <br>
+
+                        <!-- Campo Senha -->
+                        <input type="password" id="senha" class="input-senha" placeholder="Senha" required> <br>
+                        <div id="login-erro" class="erro"></div>
+                    </div>
+                    <div class="esqueceu-senha">
+                        <p>Esqueceu a senha?<br><br></p>
+                    </div>
+                    <div class="botoes">
+                        <button class="btn-entrar" onclick="login()">Entrar</button><br>
+                    </div>
+                    <div class="criar-minha-conta">
+                        <p>Não tem uma conta? Crie sua conta aqui </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

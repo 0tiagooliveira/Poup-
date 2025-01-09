@@ -1,0 +1,336 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    padding-bottom: 80px; /* Adiciona padding extra na parte inferior */
+}
+
+/* Contêiner com bordas arredondadas apenas na parte inferior */
+.container-arredondado {
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border: 2px solid #21C25E;
+    border-top: none; /* Remove a borda superior */
+    padding: 20px;
+    margin: 0; /* Remove a margem para ocupar toda a largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+}
+
+/* Título da seção */
+.titulo-secao {
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 24px;
+    margin: 20px 0;
+    padding-left: 10%; /* Adiciona padding à esquerda para alinhar com as linhas */
+}
+
+/* Contêiner de contas */
+.container-contas {
+    border-radius: 80px;
+    border: 2px solid #21C25E;
+    padding: 20px;
+    margin: 20px auto; /* Centraliza o contêiner horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    width: 100%; /* Ocupa 90% da largura da viewport */
+    max-width: 100%; /* Garante que não ultrapasse a largura da viewport */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+/* Item de conta */
+.item-conta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 80%; /* Alinha os itens com as linhas divisórias */
+    margin: 0 auto; /* Centraliza os itens horizontalmente */
+}
+
+.info-conta {
+    display: flex;
+    align-items: center;
+}
+
+.info-conta img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.titulo-conta {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.saldo-conta {
+    font-size: 16px;
+    color: #21C25E;
+}
+
+.adicionar-conta {
+    background-color: #21C25E;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.divisoria {
+    border: 1px solid #000000; /* Diminui a espessura da linha */
+    width: 80%; /* Diminui a largura da linha */
+    margin: 10px auto; /* Centraliza a linha e ajusta a margem */
+}
+
+.btn-adicionar-conta {
+    background-color: #21C25E;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Centraliza o botão horizontalmente */
+}
+
+.saldo-total {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.valor-total {
+    font-size: 24px;
+    color: #21C25E;
+}
+
+/* Conteúdo da página */
+.conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Garante que ocupe a largura total */
+    max-width: 100vw; /* Evita que o conteúdo ultrapasse a largura da viewport */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+/* Ícone para editar perfil */
+.editar-perfil {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.editar-perfil img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Lista de meses */
+.lista-meses {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.lista-meses button {
+    background-color: #FFFFFF;
+    border: 2px solid #21C25E;
+    border-radius: 5px;
+    color: #21C25E;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lista-meses button:hover {
+    background-color: #21C25E;
+    color: #FFFFFF;
+}
+
+.dropdown-conteudo {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 2px solid #21C25E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-conteudo button {
+    background-color: #FFFFFF;
+    color: #21C25E;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #21C25E;
+}
+
+.dropdown-conteudo button:hover {
+    background-color: #21C25E;
+    color: #FFFFFF;
+}
+
+.show {
+    display: block;
+}
+
+/* Saldo em contas */
+.saldo-contas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.valor-saldo {
+    margin-top: 5px;
+}
+
+.toggle-saldo {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.toggle-saldo img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Receitas e Despesas */
+.receitas-despesas {
+    display: flex;
+    justify-content: space-between; /* Adiciona espaço entre receitas e despesas */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.receitas, .despesas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.receitas img, .despesas img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.valor-receitas, .valor-despesas {
+    margin-top: 5px;
+}
+
+/* Fundo da barra de navegação */
+.fundo-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 61px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Barra de navegação */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.item-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.item-navbar img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item-navbar:hover {
+    color: #21C25E;
+    transform: translateY(-5px);
+}
+
+.item-navbar:hover img {
+    transform: scale(1.2);
+}
+
+.adicionar-navbar {
+    background-color: #21C25E;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: -35px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.adicionar-navbar img {
+    width: 30px;
+    height: 30px;
+}
+
+.adicionar-navbar:hover {
+    background-color: #179143;
+    transform: scale(1.1);
+}

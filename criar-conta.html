@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionar os scripts do Firebase CDN -->
+    <script type="module" src="criar-conta.js"></script>
+</head>
+<body>
+    <div class="fundo">
+        <div class="scroll">
+            <div class="background"></div>
+            <div class="btn-voltar-criar-conta">
+                <a href="index.html">
+                    <img src="./icon/flecha-branca.svg" alt="Voltar">
+                    <p>Voltar</p>
+                </a>
+            </div>
+            <div class="logo-entrar">
+                <div class="logo">
+                    <img src="./icon/logo-branca.svg" alt="Logo Poup+">
+                </div>
+                <div class="entrar">
+                    <div class="h1-entrar">
+                        <h1>Bem Vindo ao Poup+!</h1>
+                    </div>
+                    <div class="formulario">
+                        <!-- Campo Nome -->
+                        <input type="text" id="nome" class="input-nome" placeholder="Nome" required> <br>
+                        <!-- Campo E-mail -->
+                        <input type="email" id="email" class="input-email" placeholder="E-mail" required> <br>
+                        <!-- Campo Senha -->
+                        <input type="password" id="senha" class="input-senha" placeholder="Senha" required> <br>
+                        <div id="senha-erro" class="erro"></div>
+                        <div class="botoes">
+                            <button class="btn-entrar" onclick="criarConta()">Criar Conta</button><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
