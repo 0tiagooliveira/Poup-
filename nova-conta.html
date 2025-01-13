@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova conta</title>
+    <link rel="stylesheet" href="novaconta.css">
+</head>
+<body>
+    <div class="btn-voltar-criar-conta" style="position: absolute; top: 10px; left: 10px;">
+        <a href="home.html">
+            <img src="icon/flecha-branca.svg" alt="Voltar">
+            <p style="display: inline; margin-left: 5px;">Voltar</p>
+        </a>
+    </div>
+    <h1 class="saldo-atual">Saldo atual da conta</h1>
+    <h2 class="saldo-valor">R$ 0,00</h2>
+    <div class="container-nubank" style="width: 100%; height: calc(100% - 100px);">
+        <div class="item-conta" style="text-align: left;">
+            <img src="icon/Nubank.svg" alt="Nubank" class="icon">
+            <span>Nubank</span>
+        </div>
+        <div class="divisoria"></div>
+        <div class="item-conta" style="text-align: left;">
+            <img src="icon/Descrição.svg" alt="Descrição" class="icon">
+            <span>Descrição</span>
+        </div>
+        <div class="divisoria"></div>
+        <div class="item-conta" style="text-align: left;">
+            <img src="icon/Conta corrente.svg" alt="Conta corrente" class="icon">
+            <span>Conta corrente</span>
+        </div>
+        <div class="divisoria"></div>
+        <div class="item-conta" style="text-align: left;">
+            <img src="icon/Cor da conta.svg" alt="Cor da conta" class="icon">
+            <span>Cor da conta</span>
+            <input type="color" class="color-picker">
+        </div>
+        <div class="divisoria"></div>
+        <div class="item-conta" style="text-align: left;">
+            <img src="icon/Incluir na soma da tela inicial.svg" alt="Incluir na soma da tela inicial" class="icon">
+            <span>Incluir na soma da tela inicial</span>
+            <label class="toggle-button">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="divisoria"></div>
+        <div class="item-conta" style="text-align: left;">
+            <img src="icon/Notificação para adição rápida.svg" alt="Notificação para adição rápida" class="icon">
+            <span>Notificação para adição rápida</span>
+            <label class="toggle-button">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <div class="fundo-navbar"></div>
+    <div class="navbar">
+        <a href="#home" class="item-navbar">
+            <img src="icon/home.svg" alt="home">
+            <span>Início</span>
+        </a>
+        <a href="#transacoes" class="item-navbar">
+            <img src="icon/Transações.svg" alt="Transações">
+            <span>Transações</span>
+        </a>
+        <button class="item-navbar adicionar-navbar" onclick="toggleMenu()">
+            <img src="icon/+.svg" alt="Adicionar">
+        </button>
+        <a href="#planejamento" class="item-navbar">
+            <img src="icon/Planejamento.svg" alt="Planejamento">
+            <span>Planejamento</span>
+        </a>
+        <a href="#mais" class="item-navbar">
+            <img src="icon/mais.svg" alt="Mais">
+            <span>Mais</span>
+        </a>
+    </div>
+</body>
+</html>
