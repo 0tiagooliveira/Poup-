@@ -7,7 +7,7 @@
     <link rel="icon" type="Poup+" href="icon/LogoPoup.svg">
     <title>Entrar</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="entrar.js"></script>
+    <script type="module" src="criar-conta-usuario.js"></script>
 </head>
 
 <body>
@@ -31,21 +31,20 @@
                         <h1>Bem Vindo ao Poup+!</h1>
                     </div>
                     <div class="formulario">
+                        <!-- Campo Nome -->
+                        <input type="text" id="nome" class="input-nome" placeholder="Nome" required> <br>
+
                         <!-- Campo E-mail -->
                         <input type="email" id="email" class="input-email" placeholder="E-mail" required> <br>
 
                         <!-- Campo Senha -->
                         <input type="password" id="senha" class="input-senha" placeholder="Senha" required> <br>
-                        <div id="login-erro" class="erro"></div>
-                    </div>
-                    <div class="esqueceu-senha">
-                        <p>Esqueceu a senha?<br><br></p>
+                        <div id="senha-erro" class="erro"></div>
                     </div>
                     <div class="botoes">
-                        <button class="btn-entrar" onclick="login()">Entrar</button><br>
-                    </div>
-                    <div class="criar-minha-conta">
-                        <p>Não tem uma conta? Crie sua conta aqui </p>
+                        <br>
+                        <button class="btn-entrar" onclick="criarConta()">Criar conta</button><br>
+                    </div><br>
                     </div>
                 </div>
             </div>
