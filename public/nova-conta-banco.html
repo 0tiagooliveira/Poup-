@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Poup+" href="icon/LogoPoup.svg">
+    <title>Nova Conta</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="background-verde">
+    <div class="header-nova-conta">
+        <div class="voltar" onclick="history.back()">
+            <img src="icon/flecha-branca.svg" alt="Voltar">
+            <span class="texto-branco">Voltar</span>
+        </div>
+        <h1 class="texto-branco">Nova Conta</h1>
+        <div class="saldo-atual">
+            <span class="texto-branco">Saldo atual da conta</span>
+            <span class="valor texto-branco">R$ 0,00</span>
+        </div>
+    </div>
+
+    <!-- Container de bancos -->
+    <div class="container-bancos">
+        <h2 class="texto-branco">De onde você quer trazer seus dados?</h2>
+        <p class="texto-branco">Escolha abaixo a instituição para acompanhar toda sua vida financeira aqui no Poup+.</p>
+        
+        <div class="buscar-banco">
+            <input type="text" placeholder="Buscar por nome">
+        </div>
+
+        <div class="lista-bancos">
+            <a href="informacoes-da-conta.html?banco=Santander&icone=icon/santander.svg" class="banco-item">
+                <img src="icon/santander.svg" alt="Santander">
+                <span class="texto-branco">Santander</span>
+            </a>
+            <a href="informacoes-da-conta.html?banco=Nubank&icone=icon/nubank.svg" class="banco-item">
+                <img src="icon/nubank.svg" alt="Nubank">
+                <span class="texto-branco">Nubank</span>
+            </a>
+            <a href="informacoes-da-conta.html?banco=Banco do Brasil&icone=icon/banco-do-brasil.svg" class="banco-item">
+                <img src="icon/banco-do-brasil.svg" alt="Banco do Brasil">
+                <span class="texto-branco">Banco do Brasil</span>
+            </a>
+            <a href="informacoes-da-conta.html?banco=Caixa&icone=icon/caixa.svg" class="banco-item">
+                <img src="icon/caixa.svg" alt="Caixa">
+                <span class="texto-branco">Caixa</span>
+            </a>
+            <a href="informacoes-da-conta.html?banco=Itaú&icone=icon/itau.svg" class="banco-item">
+                <img src="icon/itau.svg" alt="Itaú">
+                <span class="texto-branco">Itaú</span>
+            </a>
+            <a href="informacoes-da-conta.html?banco=Bradesco&icone=icon/bradesco.svg" class="banco-item">
+                <img src="icon/bradesco.svg" alt="Bradesco">
+                <span class="texto-branco">Bradesco</span>
+            </a>
+            <a href="informacoes-da-conta.html?banco=PicPay&icone=icon/picpay.svg" class="banco-item">
+                <img src="icon/picpay.svg" alt="PicPay">
+                <span class="texto-branco">PicPay</span>
+            </a>
+        </div>
+    </div>
+    <!-- Barra de navegação -->
+    <div class="barra-navegacao estilo-aba2">
+        <ul class="flex-centro">
+            <li class="home ativo" data-where="home">
+                <a href="home.html">
+                    <div class="icon-background">
+                        <img src="icon/home.svg" alt="home">
+                    </div>
+                </a>
+            </li>
+            <li class="products" data-where="products">
+                <div class="icon-background">
+                    <img src="icon/Transações.svg" alt="Transações">
+                </div>
+            </li>
+            <li class="services" data-where="services">
+                <button class="botao-adicionar" onclick="toggleMenu()">
+                    <div class="icon-background">
+                        <img src="icon/+.svg" alt="Adicionar">
+                    </div>
+                </button>
+            </li>
+            <li class="about" data-where="about">
+                <div class="icon-background">
+                    <img src="icon/Planejamento.svg" alt="Planejamento">
+                </div>
+            </li>
+            <li class="help" data-where="help">
+                <div class="icon-background">
+                    <img src="icon/mais.svg" alt="Mais">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

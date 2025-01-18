@@ -525,3 +525,24 @@ img {
     background-color: #179143;
     transform: scale(1.1);
 }
+
+/* Estilo para alinhar o texto "Total" à esquerda e o valor à direita */
+.saldo-total {
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos */
+    align-items: center;
+    width: 100%; /* Ajusta a largura */
+    padding: 10px 0; /* Adiciona espaçamento vertical */
+}
+
+.saldo-total span:first-child {
+    text-align: left; /* Alinha o texto "Total" à esquerda */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.saldo-total .valor-total {
+    text-align: right; /* Alinha o valor à direita */
+    font-size: 24px;
+    color: #21C25E;
+}

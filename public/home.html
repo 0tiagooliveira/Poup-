@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="Poup+" href="icon/LogoPoup.svg">
     <title>Home</title>
-    <link rel="stylesheet" href=" style2.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
+
 <body style="background-color: #FFFFFF;">
     <div class="container-arredondado">
         <!-- Ícone para editar perfil -->
@@ -40,19 +42,19 @@
                 <span>Saldo em contas</span>
                 <span class="valor-saldo">R$ 0,00</span>
                 <button class="toggle-saldo">
-                    <img src=" icon/ver.svg" alt="Esconder Saldo">
+                    <img src="icon/ver.svg" alt="Esconder Saldo">
                 </button>
             </div>
 
             <!-- Receitas e Despesas -->
             <div class="receitas-despesas">
                 <div class="receitas">
-                    <img src=" icon/receitas.svg" alt="Receitas">
+                    <img src="icon/receitas.svg" alt="Receitas">
                     <span>Receitas</span>
                     <span class="valor-receitas">R$ 0,00</span>
                 </div>
                 <div class="despesas">
-                    <img src=" icon/despesa.svg" alt="Despesas">
+                    <img src="icon/despesa.svg" alt="Despesas">
                     <span>Despesas</span>
                     <span class="valor-despesas">R$ 0,00</span>
                 </div>
@@ -62,70 +64,66 @@
     <h2 class="titulo-secao">Contas</h2>
 
     <!-- Seção Contas -->
-    <div class="container-contas">
-
-        <div class="item-conta">
-            <div class="info-conta">
-                <img src=" icon/carteira.svg" alt="Carteira">
-                <div>
-                    <span class="titulo-conta">Carteira</span><br>
-                    <span class="saldo-conta">R$ 0,00</span>
-                </div>
-            </div>
-            <button class="adicionar-conta">+</button>
-        </div>
-        <button class="btn-adicionar-conta" onclick="adicionarConta()">Adicionar uma conta</button>
-        <div class="saldo-total">
-            <span>Total R$</span>
-            <span class="valor-total">0,00</span>
-        </div>
+    <div class="container container-contas">
+        <!-- As contas serão inseridas aqui dinamicamente -->
     </div>
-
 
     <h2 class="titulo-secao">Cartão de crédito</h2>
 
-    <!-- Seção Contas -->
-    <div class="container-contas">
+    <!-- Seção Cartão de crédito -->
+    <div class="container container-cartoes">
+        <!-- Os cartões de crédito serão inseridos aqui dinamicamente -->
+    </div>
 
-        <div class="item-conta">
-            <div class="info-conta">
-                <img src=" icon/visa-svgrepo-com.svg" alt="Carteira">
-                <div>
-                    <span class="titulo-conta">Visa</span><br>
-                    <span class="saldo-conta">R$ 0,00</span>
-                </div>
+    <h2 class="titulo-secao">Despesas por categoria</h2>
+
+    <!-- Seção Despesas por categoria -->
+    <div class="container">
+        <div class="item">
+            <div class="info info-despesas">
+                <img src="icon/despesas.svg" alt="Despesas" class="icon-tamanho"><br>
+                <p>Opa! Você não tem despesas cadastradas esse mês.</p>
             </div>
-        </div>
-        <div class="saldo-total">
-            <span>Total R$</span>
-            <span class="valor-total">0,00</span>
+            <button class="btn-adicionar" onclick="adicionarCategoria()">Adicionar nova categoria</button>
         </div>
     </div>
-
+    
     <!-- Barra de navegação -->
-    <div class="fundo-navbar"></div>
-    <div class="navbar">
-        <a href="#home" class="item-navbar">
-            <img src=" icon/home.svg" alt="home">
-            <span>Início</span>
-        </a>
-        <a href="#transacoes" class="item-navbar">
-            <img src=" icon/Transações.svg" alt="Transações">
-            <span>Transações</span>
-        </a>
-        <button class="item-navbar adicionar-navbar" onclick="toggleMenu()">
-            <img src=" icon/+.svg" alt="Adicionar">
-        </button>
-        <a href="#planejamento" class="item-navbar">
-            <img src=" icon/Planejamento.svg" alt="Planejamento">
-            <span>Planejamento</span>
-        </a>
-        <a href="#mais" class="item-navbar">
-            <img src=" icon/mais.svg" alt="Mais">
-            <span>Mais</span>
-        </a>
+    <div class="barra-navegacao estilo-aba2">
+        <ul class="flex-centro">
+            <li class="home ativo" data-where="home">
+                <a href="home.html">
+                    <div class="icon-background">
+                        <img src="icon/home.svg" alt="home">
+                    </div>
+                </a>
+            </li>
+            <li class="products" data-where="products">
+                <div class="icon-background">
+                    <img src="icon/Transações.svg" alt="Transações">
+                </div>
+            </li>
+            <li class="services" data-where="services">
+                <button class="botao-adicionar" onclick="toggleMenu()">
+                    <div class="icon-background">
+                        <img src="icon/+.svg" alt="Adicionar">
+                    </div>
+                </button>
+            </li>
+            <li class="about" data-where="about">
+                <div class="icon-background">
+                    <img src="icon/Planejamento.svg" alt="Planejamento">
+                </div>
+            </li>
+            <li class="help" data-where="help">
+                <div class="icon-background">
+                    <img src="icon/mais.svg" alt="Mais">
+                </div>
+            </li>
+        </ul>
     </div>
 
-    <script src=" home.js"></script>
+    <script src="home.js"></script>
 </body>
+
 </html>
